@@ -1,3 +1,5 @@
+//Question can be viewed here: https://leetcode.com/explore/challenge/card/october-leetcoding-challenge/559/week-1-october-1st-october-7th/3480/
+//**********************************************************************Question Description****************************************
 //You have a RecentCounter class which counts the number of recent requests within a certain time frame.
 //
 //Implement the RecentCounter class :
@@ -29,12 +31,13 @@
 //1 <= t <= 109
 //Each test case will call ping with strictly increasing values of t.
 //At most 104 calls will be made to ping.
+//***********************************************************************************************************************************************************
 class RecentCounter {
-    int count;
-    int lowers[10000];
-    int uppers[10000];
-    int ts[10000];
-    int i;
+    int count;         //counter to report number of desired pings
+    int lowers[10000]; //to store lower limits of each input using formula t-3000
+    int uppers[10000]; //to store upper limits i.e t itself
+    int ts[10000];     //to store previous inputs
+    int i;             //index for arrays
 public:
     RecentCounter() {
         count = 0;
